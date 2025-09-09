@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/kazurayam/proxy-server-book-2#readme",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "http-proxy-middleware": "^3.0.5"
   }
 }
