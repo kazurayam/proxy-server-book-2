@@ -2,18 +2,18 @@
 
 const express = require("express")
 const app = express()
-const { createProxyMiddleware } = require("http-proxy-middleware")
+const { createProxyMiddleware  } = require("http-proxy-middleware")
 
 app.get("/", (req, res) => {
     res.send("This is my proxy server")
 })
 
-app.use("/corona-tracker-world-data", (req, res, next) => {
+app.use((req, res, next) => {
     createProxyMiddleware({
-        target: "https://monotein-books.vercel.app/api/corona-tracker/summary",
+        target: "https://monotein-books.vercel.app",
         changeOrigin: true,
         pathRewrite: {
-            [`^/corona-tracker-world-data`]: "",
+            [`^/corona-tracker-world-data`]: "/api/corona-tracker/summary",
         },
     })(req, res, next)
 })
