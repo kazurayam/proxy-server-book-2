@@ -15,7 +15,7 @@ const limiter = rateLimit({
 app.get("/", (req, res) => {
     const params = url.parse(req.url).query
     console.log(params)
-    res.send("This is my proxy server")
+    res.send("<p><a href='/corona-tracker-world-data'>/corona-tracker-world-data</a><p>")
 })
 
 app.use(limiter, (req, res, next) => {
