@@ -24,3 +24,8 @@ $ cd $projectdir
 ```
 
 and then CTRL+C
+
+## vercelにデプロイする
+
+https://vercel.com/new?teamSlug=kazurayams-projects
+
